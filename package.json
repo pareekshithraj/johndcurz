@@ -2,6 +2,7 @@
   "name": "johndcruz-app",
   "version": "1.0.0",
   "description": "John D Cruz — Counselor & Public Servant Full-Stack App",
+  "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\" --names \"API,WEB\" --prefix-colors \"blue,green\"",
     "start": "node server/index.js",
     "build": "cd client && npm run build",
