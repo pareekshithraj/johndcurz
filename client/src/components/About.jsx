@@ -12,7 +12,7 @@ export default function About() {
             <div className="about-card-float">
               <div className="float-icon">🏛️</div>
               <div>
-                <strong>Public Service Leader</strong>
+                <strong>Mentor</strong>
                 <span>Serving since 2009</span>
               </div>
             </div>
