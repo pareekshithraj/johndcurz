@@ -1,27 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
-import Plans, { FALLBACK_PLANS, normalizePlans } from '../components/Plans';
+import Plans from '../components/Plans';
 import Services from '../components/Services';
 import Achievements from '../components/Achievements';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import BookingModal from '../components/BookingModal';
-import api from '../api';
+import { openGoogleForm } from '../siteConfig';
 
 export default function Home() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState(null);
-  const [plans, setPlans] = useState([]);
-
-  useEffect(() => {
-    api.get('/plans')
-      .then(r => setPlans(normalizePlans(r.data?.length ? r.data : FALLBACK_PLANS)))
-      .catch(() => setPlans(normalizePlans(FALLBACK_PLANS)));
-  }, []);
-
   useEffect(() => {
     if (!window.location.hash) return;
     const targetId = window.location.hash.slice(1);
@@ -33,28 +22,17 @@ export default function Home() {
     }, 100);
   }, []);
 
-  const openBooking = (plan = null) => {
-    setSelectedPlan(plan);
-    setModalOpen(true);
-  };
-
   return (
     <>
-      <Navbar onBookNow={() => openBooking()} />
-      <Hero onBookNow={() => openBooking()} />
+      <Navbar onBookNow={openGoogleForm} />
+      <Hero onBookNow={openGoogleForm} />
       <About />
-      <Plans onBookPlan={(plan) => openBooking(plan)} />
+      <Plans />
       <Services />
       <Achievements />
       <Testimonials />
       <Contact />
       <Footer />
-      <BookingModal
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        selectedPlan={selectedPlan}
-        plans={plans}
-      />
     </>
   );
 }

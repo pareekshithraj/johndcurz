@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '../api';
+import { openGoogleForm } from '../siteConfig';
 
 const PLAN_META = {
   starter: { gradient: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)', accentColor: '#94a3b8', icon: '🌱', glow: 'rgba(148,163,184,0.15)' },
@@ -80,7 +81,7 @@ export function normalizePlans(plans) {
   });
 }
 
-export default function Plans({ onBookPlan }) {
+export default function Plans() {
   const [plans, setPlans] = useState([]);
   const [loading, setLoading] = useState(true);
   const [hovered, setHovered] = useState(null);
@@ -186,14 +187,14 @@ export default function Plans({ onBookPlan }) {
                 <button
                   className="pcn-btn"
                   id={`book-plan-${plan.slug}`}
-                  onClick={() => onBookPlan(plan)}
+                  onClick={openGoogleForm}
                   style={{
                     background: isPopular ? `linear-gradient(135deg, ${meta.accentColor}, #c8962f)` : `${meta.accentColor}18`,
                     color: isPopular ? '#0a1628' : meta.accentColor,
                     border: `1px solid ${meta.accentColor}40`,
                   }}
                 >
-                  {plan.slug === 'custom' ? 'Request a Quote' : 'Book This Plan'}
+                  {plan.slug === 'custom' ? 'Open Inquiry Form' : 'Open Booking Form'}
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
               </div>

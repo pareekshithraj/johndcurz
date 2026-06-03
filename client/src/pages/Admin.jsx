@@ -89,7 +89,7 @@ export default function Admin() {
       {/* Sidebar */}
       <aside className="admin-sidebar">
         <Link to="/" className="admin-logo" id="admin-logo-link">
-          <span className="logo-initials">JDC</span>
+          <span className="logo-initials">JDG</span>
           <span className="logo-text">Admin</span>
         </Link>
 

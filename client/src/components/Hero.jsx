@@ -41,10 +41,10 @@ export default function Hero({ onBookNow }) {
 
       <div className="hero-inner">
         <div className="hero-content">
-          <div className="section-tag">Counselor &amp; Public Servant</div>
+          <div className="section-tag">Counselor &amp; Mentor</div>
           <h1 className="hero-title">
             John D'Cruz Gomes
-            <span className="hero-title-main" style={{color: '#4facfe'}}>Counselor &amp; Public Servant</span>
+            <span className="hero-title-main" style={{color: '#4facfe'}}>Counselor &amp; Mentor</span>
           </h1>
 
           <p className="hero-subtitle">

@@ -33,7 +33,7 @@ export default function Signup() {
     <div className="auth-page">
       <div className="auth-left">
         <Link to="/" className="auth-logo">
-          <span className="logo-initials">JDC</span>
+          <span className="logo-initials">JDG</span>
           <span className="logo-text">John D Cruz</span>
         </Link>
         <div className="auth-hero-text">

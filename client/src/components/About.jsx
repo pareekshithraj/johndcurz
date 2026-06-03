@@ -23,7 +23,7 @@ export default function About() {
               A Leader Rooted in <span className="text-accent">Purpose &amp; People</span>
             </h2>
             <p className="about-intro">
-              John D'Cruz Gomes has dedicated his life to improving the well-being of individuals, families,
+              John D'Cruz Gomes has dedicated his life in improving the well-being of individuals, families,
               and communities. As a seasoned counselor and public servant, he brings empathy, integrity,
               and unwavering commitment to every role he undertakes.
             </p>

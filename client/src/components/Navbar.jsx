@@ -42,7 +42,7 @@ export default function Navbar({ onBookNow }) {
       <nav className={navClass} id="navbar">
         <div className="nav-container">
           <Link to="/" className="nav-logo" id="nav-logo-link">
-            <span className="logo-initials">JDC</span>
+            <span className="logo-initials">JDG</span>
             <span className="logo-text">John D'Cruz <span className="logo-bold">Gomes</span></span>
           </Link>
 
